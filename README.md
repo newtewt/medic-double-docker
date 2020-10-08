@@ -5,8 +5,9 @@ Start the first container as normal. With our standard docker-compose.yml file.
 The second requires a docker-compose.yml file that has been modified to run exclusive to the normal one. That is the 3.11.yml
 
 `docker-compose -f 3.11.yml up -d`
-`docker cp ./nginx-3.11.conf medic-os-three:/srv/settings/medic-core/nginx/nginx.conf`
-`docker exec medic-os-three /boot/svc-restart medic-core`
+
+`docker cp ./nginx-3.11.conf medic-os-three:/srv/settings/medic-core/nginx/nginx.conf && docker exec medic-os-three /boot/svc-restart medic-core`
+
 
 Then you can navigate to https://localhost:444
 
