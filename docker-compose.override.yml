@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  express:
+    container_name: express
+    image: medicmobile/simple-express-server:1.0.0
+    # networks:
+    #   - medic-net
+    ports:
+      - 3000:3000
